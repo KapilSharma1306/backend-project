@@ -28,7 +28,7 @@ const userSchema = new Schema({
         type:String , //cloudinary url
         required:true
     },
-    coverImage:{
+    coverImage:{       
         type:String // cloudinary url
     },
     watchHistory:{
@@ -79,6 +79,5 @@ userSchema.methods.generateRefershToken = function(){
         }
     )
 }
-userSchema.methods.generateRefreshToken = function(){}
 
 export const User = mongoose.model("User",userSchema)
